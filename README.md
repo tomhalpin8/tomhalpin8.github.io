@@ -1,6 +1,6 @@
 # tomhalpin8.github.io
 
-Personal GitHub Pages site for Tom Halpin.
+Personal GitHub Pages site for Thomas Halpin, focused on realtime motion capture, Unreal Engine retargeting, MetaHuman workflows, and in-engine cinematic production.
 
 ## Local Preview
 

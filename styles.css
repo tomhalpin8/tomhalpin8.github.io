@@ -1,14 +1,15 @@
 :root {
-    --ink: #1d2523;
-    --muted: #59645f;
-    --paper: #f7f4ed;
+    --ink: #17201e;
+    --muted: #586560;
+    --paper: #f5f3ee;
     --surface: #ffffff;
-    --line: #d8d4c9;
-    --teal: #2f766f;
-    --teal-dark: #1e514d;
-    --amber: #d89b3d;
-    --rust: #b75f4a;
-    --shadow: 0 18px 42px rgba(29, 37, 35, 0.13);
+    --soft: #ebe7dc;
+    --line: #d7d2c6;
+    --teal: #2b756f;
+    --teal-dark: #184f4a;
+    --amber: #c79545;
+    --charcoal: #202a28;
+    --shadow: 0 18px 42px rgba(23, 32, 30, 0.13);
 }
 
 * {
@@ -48,16 +49,17 @@ a {
     gap: 24px;
     min-height: 72px;
     padding: 18px clamp(20px, 5vw, 72px);
-    background: rgba(247, 244, 237, 0.86);
-    border-bottom: 1px solid rgba(216, 212, 201, 0.7);
+    background: rgba(245, 243, 238, 0.88);
+    border-bottom: 1px solid rgba(215, 210, 198, 0.78);
     backdrop-filter: blur(16px);
 }
 
 .brand {
     font-size: 0.95rem;
-    font-weight: 800;
+    font-weight: 850;
     text-transform: uppercase;
     letter-spacing: 0;
+    white-space: nowrap;
 }
 
 .nav-links {
@@ -67,7 +69,7 @@ a {
     gap: clamp(14px, 3vw, 32px);
     color: var(--muted);
     font-size: 0.95rem;
-    font-weight: 700;
+    font-weight: 760;
 }
 
 .nav-links a {
@@ -81,17 +83,17 @@ a {
 }
 
 .hero {
-    min-height: 84vh;
+    min-height: 86vh;
     display: flex;
     align-items: center;
-    padding: 120px clamp(20px, 5vw, 72px) 72px;
+    padding: 118px clamp(20px, 5vw, 72px) 70px;
     background:
-        linear-gradient(90deg, rgba(247, 244, 237, 0.98) 0%, rgba(247, 244, 237, 0.93) 34%, rgba(247, 244, 237, 0.42) 61%, rgba(247, 244, 237, 0.08) 100%),
-        url("assets/hero-game-dev.png") center / cover no-repeat;
+        linear-gradient(90deg, rgba(245, 243, 238, 0.99) 0%, rgba(245, 243, 238, 0.95) 34%, rgba(245, 243, 238, 0.55) 58%, rgba(245, 243, 238, 0.1) 100%),
+        url("assets/hero-mocap-unreal.png") center / cover no-repeat;
 }
 
 .hero-content {
-    width: min(710px, 100%);
+    width: min(790px, 100%);
 }
 
 .eyebrow,
@@ -107,18 +109,18 @@ a {
 }
 
 .hero h1 {
-    max-width: 760px;
+    max-width: 790px;
     margin: 0;
-    font-size: clamp(4.2rem, 10vw, 8rem);
+    font-size: clamp(4rem, 9.5vw, 8rem);
     line-height: 0.9;
     letter-spacing: 0;
 }
 
 .hero-copy {
-    max-width: 610px;
+    max-width: 670px;
     margin: 28px 0 0;
-    color: #34413d;
-    font-size: clamp(1.08rem, 2vw, 1.36rem);
+    color: #32403c;
+    font-size: clamp(1.08rem, 1.8vw, 1.32rem);
 }
 
 .hero-actions,
@@ -126,7 +128,7 @@ a {
     display: flex;
     flex-wrap: wrap;
     gap: 12px;
-    margin-top: 34px;
+    margin-top: 32px;
 }
 
 .button {
@@ -137,7 +139,7 @@ a {
     padding: 12px 18px;
     border: 1px solid var(--ink);
     border-radius: 8px;
-    font-weight: 800;
+    font-weight: 820;
     line-height: 1.2;
     transition: transform 160ms ease, background 160ms ease, border-color 160ms ease;
 }
@@ -164,8 +166,33 @@ a {
     background: rgba(255, 255, 255, 0.72);
 }
 
+.hero-tags,
+.role-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 0;
+    margin: 28px 0 0;
+    list-style: none;
+}
+
+.hero-tags li,
+.role-list li {
+    min-height: 36px;
+    display: inline-flex;
+    align-items: center;
+    padding: 7px 11px;
+    color: #20312d;
+    background: rgba(255, 255, 255, 0.76);
+    border: 1px solid rgba(215, 210, 198, 0.9);
+    border-radius: 8px;
+    font-size: 0.9rem;
+    font-weight: 760;
+}
+
 .intro-band,
-.resume-band,
+.pipeline-band,
+.roles-band,
 .contact-band {
     padding: clamp(56px, 8vw, 96px) clamp(20px, 5vw, 72px);
 }
@@ -178,7 +205,7 @@ a {
 
 .content-grid {
     display: grid;
-    grid-template-columns: minmax(0, 0.8fr) minmax(280px, 1.2fr);
+    grid-template-columns: minmax(0, 0.95fr) minmax(280px, 1.05fr);
     gap: clamp(28px, 6vw, 88px);
     width: min(1120px, 100%);
     margin: 0 auto;
@@ -187,151 +214,214 @@ a {
 
 .content-grid h2,
 .section-heading h2,
+.roles-inner h2,
 .contact-inner h2 {
     margin: 0;
-    font-size: clamp(2rem, 4vw, 3.6rem);
-    line-height: 1;
+    font-size: clamp(2rem, 4vw, 3.45rem);
+    line-height: 1.02;
     letter-spacing: 0;
+}
+
+.content-grid p:last-child,
+.section-heading p,
+.contact-inner p {
+    color: var(--muted);
+    font-size: clamp(1.02rem, 1.6vw, 1.18rem);
 }
 
 .content-grid p:last-child {
     margin: 0;
-    color: var(--muted);
-    font-size: clamp(1.05rem, 2vw, 1.25rem);
 }
 
 .section {
     width: min(1180px, calc(100% - 40px));
     margin: 0 auto;
-    padding: clamp(64px, 9vw, 116px) 0;
+    padding: clamp(64px, 9vw, 112px) 0;
 }
 
 .section-heading {
-    max-width: 760px;
+    max-width: 850px;
     margin-bottom: 32px;
 }
 
-.section-heading.compact {
-    margin-bottom: 24px;
+.section-heading p {
+    margin: 14px 0 0;
 }
 
 .card-grid {
     display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 18px;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 16px;
 }
 
 .work-card {
-    min-height: 284px;
-    padding: 28px;
+    min-height: 320px;
+    padding: 26px;
     background: var(--surface);
     border: 1px solid var(--line);
     border-radius: 8px;
-    box-shadow: 0 10px 28px rgba(29, 37, 35, 0.06);
+    box-shadow: 0 10px 28px rgba(23, 32, 30, 0.06);
 }
 
 .work-card:nth-child(2) {
-    border-top: 5px solid var(--amber);
+    border-top: 5px solid var(--teal);
 }
 
 .work-card:nth-child(3) {
-    border-top: 5px solid var(--rust);
+    border-top: 5px solid var(--amber);
+}
+
+.work-card:nth-child(4) {
+    border-top: 5px solid #82916d;
 }
 
 .work-card h3,
-.resume-item h3 {
+.pipeline-item h3,
+.skill-group h3 {
     margin: 0 0 12px;
-    font-size: 1.35rem;
-    line-height: 1.2;
+    font-size: 1.22rem;
+    line-height: 1.22;
 }
 
 .work-card p,
-.resume-item p,
-.contact-inner p {
+.pipeline-item p,
+.skill-group li {
     color: var(--muted);
 }
 
 .work-card p,
-.resume-item p {
+.pipeline-item p {
     margin: 0;
 }
 
-.resume-band {
-    background: #25312e;
+.pipeline-band {
+    background: var(--charcoal);
     color: #f9f7f1;
 }
 
-.resume-band .section-heading {
+.pipeline-inner,
+.roles-inner {
     width: min(1180px, 100%);
-    margin: 0 auto 30px;
+    margin: 0 auto;
 }
 
-.resume-band .section-kicker,
-.resume-band .resume-label {
-    color: #f1bd69;
+.pipeline-band .section-heading {
+    margin-bottom: 30px;
 }
 
-.resume-list {
+.pipeline-band .section-kicker,
+.pipeline-band .resume-label {
+    color: #f0be6b;
+}
+
+.pipeline-list {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 1px;
-    width: min(1180px, 100%);
-    margin: 0 auto;
     background: rgba(255, 255, 255, 0.18);
     border: 1px solid rgba(255, 255, 255, 0.18);
 }
 
-.resume-item {
-    min-height: 230px;
+.pipeline-item {
+    min-height: 240px;
     padding: 30px;
-    background: #25312e;
+    background: var(--charcoal);
 }
 
-.resume-item p {
+.pipeline-item p {
     color: rgba(249, 247, 241, 0.74);
 }
 
-.skill-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 12px;
+.skills-section {
+    padding-bottom: clamp(54px, 7vw, 86px);
+}
+
+.skill-groups {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 16px;
+}
+
+.skill-group {
+    padding: 24px;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 8px;
+}
+
+.skill-group ul {
+    display: grid;
+    gap: 8px;
     padding: 0;
     margin: 0;
     list-style: none;
 }
 
-.skill-list li {
-    min-height: 42px;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    padding: 9px 14px;
-    color: #21302c;
+.skill-group li {
+    position: relative;
+    padding-left: 16px;
+}
+
+.skill-group li::before {
+    position: absolute;
+    top: 0.72em;
+    left: 0;
+    width: 6px;
+    height: 6px;
+    content: "";
+    background: var(--teal);
+    border-radius: 50%;
+}
+
+.roles-band {
+    background: var(--soft);
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+}
+
+.roles-inner {
+    display: grid;
+    grid-template-columns: minmax(0, 0.9fr) minmax(300px, 1.1fr);
+    gap: clamp(30px, 6vw, 80px);
+    align-items: start;
+}
+
+.role-list {
+    margin-top: 0;
+}
+
+.role-list li {
     background: var(--surface);
-    border: 1px solid var(--line);
-    border-radius: 8px;
-    font-weight: 800;
 }
 
 .contact-band {
     background: var(--surface);
-    border-top: 1px solid var(--line);
 }
 
 .contact-inner {
-    width: min(900px, 100%);
+    width: min(920px, 100%);
     margin: 0 auto;
     text-align: center;
 }
 
 .contact-inner p {
-    max-width: 680px;
+    max-width: 760px;
     margin: 18px auto 0;
-    font-size: 1.08rem;
 }
 
 .contact-actions {
     justify-content: center;
+}
+
+@media (max-width: 1100px) {
+    .card-grid,
+    .skill-groups {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .work-card {
+        min-height: 260px;
+    }
 }
 
 @media (max-width: 900px) {
@@ -350,28 +440,35 @@ a {
     }
 
     .hero {
-        min-height: 80vh;
+        min-height: 82vh;
         align-items: flex-end;
         padding-top: 150px;
         background:
-            linear-gradient(180deg, rgba(247, 244, 237, 0.96) 0%, rgba(247, 244, 237, 0.88) 48%, rgba(247, 244, 237, 0.62) 100%),
-            url("assets/hero-game-dev.png") 58% center / cover no-repeat;
+            linear-gradient(180deg, rgba(245, 243, 238, 0.98) 0%, rgba(245, 243, 238, 0.9) 48%, rgba(245, 243, 238, 0.68) 100%),
+            url("assets/hero-mocap-unreal.png") 61% center / cover no-repeat;
     }
 
     .hero h1 {
         max-width: 10ch;
-        font-size: clamp(3.5rem, 16vw, 5.4rem);
+        font-size: clamp(3.25rem, 15vw, 5.4rem);
     }
 
     .content-grid,
-    .card-grid,
-    .resume-list {
+    .pipeline-list,
+    .roles-inner {
         grid-template-columns: 1fr;
     }
 
-    .work-card,
-    .resume-item {
+    .pipeline-item,
+    .work-card {
         min-height: auto;
+    }
+}
+
+@media (max-width: 620px) {
+    .card-grid,
+    .skill-groups {
+        grid-template-columns: 1fr;
     }
 }
 
@@ -386,12 +483,21 @@ a {
     }
 
     .hero {
-        min-height: 78vh;
-        padding: 150px 18px 54px;
+        min-height: 82vh;
+        padding: 154px 18px 46px;
     }
 
     .hero-copy {
         font-size: 1rem;
+    }
+
+    .hero-tags {
+        gap: 8px;
+    }
+
+    .hero-tags li,
+    .role-list li {
+        font-size: 0.86rem;
     }
 
     .button {
