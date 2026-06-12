@@ -1,0 +1,404 @@
+:root {
+    --ink: #1d2523;
+    --muted: #59645f;
+    --paper: #f7f4ed;
+    --surface: #ffffff;
+    --line: #d8d4c9;
+    --teal: #2f766f;
+    --teal-dark: #1e514d;
+    --amber: #d89b3d;
+    --rust: #b75f4a;
+    --shadow: 0 18px 42px rgba(29, 37, 35, 0.13);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    color: var(--ink);
+    background: var(--paper);
+    font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    line-height: 1.6;
+}
+
+img {
+    max-width: 100%;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.site-header {
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    min-height: 72px;
+    padding: 18px clamp(20px, 5vw, 72px);
+    background: rgba(247, 244, 237, 0.86);
+    border-bottom: 1px solid rgba(216, 212, 201, 0.7);
+    backdrop-filter: blur(16px);
+}
+
+.brand {
+    font-size: 0.95rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: clamp(14px, 3vw, 32px);
+    color: var(--muted);
+    font-size: 0.95rem;
+    font-weight: 700;
+}
+
+.nav-links a {
+    border-bottom: 2px solid transparent;
+}
+
+.nav-links a:hover,
+.nav-links a:focus-visible {
+    color: var(--ink);
+    border-color: var(--amber);
+}
+
+.hero {
+    min-height: 84vh;
+    display: flex;
+    align-items: center;
+    padding: 120px clamp(20px, 5vw, 72px) 72px;
+    background:
+        linear-gradient(90deg, rgba(247, 244, 237, 0.98) 0%, rgba(247, 244, 237, 0.93) 34%, rgba(247, 244, 237, 0.42) 61%, rgba(247, 244, 237, 0.08) 100%),
+        url("assets/hero-game-dev.png") center / cover no-repeat;
+}
+
+.hero-content {
+    width: min(710px, 100%);
+}
+
+.eyebrow,
+.section-kicker,
+.resume-label,
+.card-index {
+    margin: 0 0 12px;
+    color: var(--teal-dark);
+    font-size: 0.78rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 0;
+}
+
+.hero h1 {
+    max-width: 760px;
+    margin: 0;
+    font-size: clamp(4.2rem, 10vw, 8rem);
+    line-height: 0.9;
+    letter-spacing: 0;
+}
+
+.hero-copy {
+    max-width: 610px;
+    margin: 28px 0 0;
+    color: #34413d;
+    font-size: clamp(1.08rem, 2vw, 1.36rem);
+}
+
+.hero-actions,
+.contact-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 34px;
+}
+
+.button {
+    display: inline-flex;
+    min-height: 48px;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 18px;
+    border: 1px solid var(--ink);
+    border-radius: 8px;
+    font-weight: 800;
+    line-height: 1.2;
+    transition: transform 160ms ease, background 160ms ease, border-color 160ms ease;
+}
+
+.button:hover,
+.button:focus-visible {
+    transform: translateY(-2px);
+}
+
+.button-primary {
+    color: #ffffff;
+    background: var(--ink);
+    box-shadow: var(--shadow);
+}
+
+.button-primary:hover,
+.button-primary:focus-visible {
+    background: var(--teal-dark);
+    border-color: var(--teal-dark);
+}
+
+.button-secondary {
+    color: var(--ink);
+    background: rgba(255, 255, 255, 0.72);
+}
+
+.intro-band,
+.resume-band,
+.contact-band {
+    padding: clamp(56px, 8vw, 96px) clamp(20px, 5vw, 72px);
+}
+
+.intro-band {
+    background: var(--surface);
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+}
+
+.content-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 0.8fr) minmax(280px, 1.2fr);
+    gap: clamp(28px, 6vw, 88px);
+    width: min(1120px, 100%);
+    margin: 0 auto;
+    align-items: start;
+}
+
+.content-grid h2,
+.section-heading h2,
+.contact-inner h2 {
+    margin: 0;
+    font-size: clamp(2rem, 4vw, 3.6rem);
+    line-height: 1;
+    letter-spacing: 0;
+}
+
+.content-grid p:last-child {
+    margin: 0;
+    color: var(--muted);
+    font-size: clamp(1.05rem, 2vw, 1.25rem);
+}
+
+.section {
+    width: min(1180px, calc(100% - 40px));
+    margin: 0 auto;
+    padding: clamp(64px, 9vw, 116px) 0;
+}
+
+.section-heading {
+    max-width: 760px;
+    margin-bottom: 32px;
+}
+
+.section-heading.compact {
+    margin-bottom: 24px;
+}
+
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.work-card {
+    min-height: 284px;
+    padding: 28px;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    box-shadow: 0 10px 28px rgba(29, 37, 35, 0.06);
+}
+
+.work-card:nth-child(2) {
+    border-top: 5px solid var(--amber);
+}
+
+.work-card:nth-child(3) {
+    border-top: 5px solid var(--rust);
+}
+
+.work-card h3,
+.resume-item h3 {
+    margin: 0 0 12px;
+    font-size: 1.35rem;
+    line-height: 1.2;
+}
+
+.work-card p,
+.resume-item p,
+.contact-inner p {
+    color: var(--muted);
+}
+
+.work-card p,
+.resume-item p {
+    margin: 0;
+}
+
+.resume-band {
+    background: #25312e;
+    color: #f9f7f1;
+}
+
+.resume-band .section-heading {
+    width: min(1180px, 100%);
+    margin: 0 auto 30px;
+}
+
+.resume-band .section-kicker,
+.resume-band .resume-label {
+    color: #f1bd69;
+}
+
+.resume-list {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1px;
+    width: min(1180px, 100%);
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.18);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.resume-item {
+    min-height: 230px;
+    padding: 30px;
+    background: #25312e;
+}
+
+.resume-item p {
+    color: rgba(249, 247, 241, 0.74);
+}
+
+.skill-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.skill-list li {
+    min-height: 42px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 9px 14px;
+    color: #21302c;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    font-weight: 800;
+}
+
+.contact-band {
+    background: var(--surface);
+    border-top: 1px solid var(--line);
+}
+
+.contact-inner {
+    width: min(900px, 100%);
+    margin: 0 auto;
+    text-align: center;
+}
+
+.contact-inner p {
+    max-width: 680px;
+    margin: 18px auto 0;
+    font-size: 1.08rem;
+}
+
+.contact-actions {
+    justify-content: center;
+}
+
+@media (max-width: 900px) {
+    .site-header {
+        position: absolute;
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .nav-links {
+        width: 100%;
+        justify-content: flex-start;
+        overflow-x: auto;
+        padding-bottom: 2px;
+    }
+
+    .hero {
+        min-height: 80vh;
+        align-items: flex-end;
+        padding-top: 150px;
+        background:
+            linear-gradient(180deg, rgba(247, 244, 237, 0.96) 0%, rgba(247, 244, 237, 0.88) 48%, rgba(247, 244, 237, 0.62) 100%),
+            url("assets/hero-game-dev.png") 58% center / cover no-repeat;
+    }
+
+    .hero h1 {
+        max-width: 10ch;
+        font-size: clamp(3.5rem, 16vw, 5.4rem);
+    }
+
+    .content-grid,
+    .card-grid,
+    .resume-list {
+        grid-template-columns: 1fr;
+    }
+
+    .work-card,
+    .resume-item {
+        min-height: auto;
+    }
+}
+
+@media (max-width: 540px) {
+    .site-header {
+        padding: 16px 18px;
+    }
+
+    .nav-links {
+        gap: 16px;
+        font-size: 0.9rem;
+    }
+
+    .hero {
+        min-height: 78vh;
+        padding: 150px 18px 54px;
+    }
+
+    .hero-copy {
+        font-size: 1rem;
+    }
+
+    .button {
+        width: 100%;
+    }
+
+    .section {
+        width: min(100% - 36px, 1180px);
+    }
+}
