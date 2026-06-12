@@ -3,189 +3,165 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Thomas Halpin is a realtime motion capture and Unreal Engine cinematics specialist focused on Vicon capture, retargeting, MetaHuman workflows, and Sequencer-based production.">
-    <meta property="og:title" content="Thomas Halpin | Realtime Motion Capture & Unreal Cinematics">
-    <meta property="og:description" content="Motion capture stage operations, realtime Unreal Engine retargeting, MetaHuman workflows, and in-engine cinematic production.">
+    <meta name="description" content="Thomas Halpin is a realtime motion capture and Unreal Engine cinematics specialist focused on Vicon capture, retargeting, MetaHuman workflows, Sequencer, and virtual production.">
+    <meta property="og:title" content="Thomas Halpin | Realtime Mocap & Unreal Cinematics">
+    <meta property="og:description" content="Demo reels, motion capture snippets, Unreal Engine cinematics, retargeting, facial capture, and virtual production workflows.">
     <meta property="og:type" content="website">
-    <meta property="og:image" content="assets/hero-mocap-unreal.png">
-    <title>Thomas Halpin | Realtime Motion Capture & Unreal Cinematics</title>
+    <meta property="og:image" content="assets/images/poster-motion-capture.jpg">
+    <title>Thomas Halpin | Realtime Mocap & Unreal Cinematics</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header class="site-header" aria-label="Primary">
-        <a class="brand" href="#top" aria-label="Thomas Halpin home">Thomas Halpin</a>
-        <nav class="nav-links" aria-label="Site navigation">
-            <a href="#expertise">Expertise</a>
-            <a href="#pipeline">Pipeline</a>
-            <a href="#skills">Skills</a>
-            <a href="#contact">Contact</a>
+    <header class="site-header">
+        <a class="brand" href="index.html" aria-label="Thomas Halpin home">Thomas Halpin</a>
+        <nav class="nav-links" aria-label="Primary navigation">
+            <a class="active" href="index.html">Home</a>
+            <a href="motion-capture.html">Mocap</a>
+            <a href="unreal-cinematics.html">Cinematics</a>
+            <a href="realtime-retargeting.html">Retargeting</a>
         </nav>
     </header>
 
-    <main id="top">
-        <section class="hero" aria-label="Introduction">
-            <div class="hero-content">
-                <p class="eyebrow">Realtime Motion Capture &amp; Unreal Cinematics</p>
+    <main>
+        <section class="hero-screen">
+            <video class="hero-video" autoplay muted loop playsinline preload="metadata" poster="assets/images/poster-mocap-unreal-realtime-retargeting.jpg">
+                <source src="assets/clips/mocap-unreal-realtime-retargeting.mp4" type="video/mp4">
+            </video>
+            <div class="hero-overlay"></div>
+            <div class="hero-copy">
+                <p class="eyebrow">Realtime Motion Capture / Unreal Engine Cinematics</p>
                 <h1>Thomas Halpin</h1>
-                <p class="hero-copy">Motion Capture Stage Technician specializing in Vicon capture, full-body and facial retargeting, MetaHuman workflows, and Sequencer-based cinematic production in Unreal Engine.</p>
-                <div class="hero-actions" aria-label="Primary links">
-                    <a class="button button-primary" href="#expertise">View Expertise</a>
-                    <a class="button button-secondary" href="https://github.com/tomhalpin8" target="_blank" rel="noreferrer">GitHub</a>
+                <p>Motion Capture Stage Technician bridging Vicon stage operations, full-body and facial retargeting, MetaHuman workflows, and Sequencer-based in-engine cinematic production.</p>
+                <div class="hero-actions">
+                    <a class="button button-primary" href="#reels">Watch Reels</a>
+                    <a class="button button-secondary" href="#focus">Choose Focus</a>
                 </div>
-                <ul class="hero-tags" aria-label="Core focus areas">
-                    <li>Vicon Motion Capture</li>
-                    <li>Realtime Retargeting</li>
-                    <li>MetaHuman</li>
-                    <li>Unreal Sequencer</li>
-                </ul>
+            </div>
+            <div class="hero-meta" aria-label="Core skills">
+                <span>Vicon</span>
+                <span>Realtime Retargeting</span>
+                <span>MetaHuman</span>
+                <span>Sequencer</span>
             </div>
         </section>
 
-        <section class="intro-band" aria-label="Profile summary">
-            <div class="content-grid">
+        <section class="section intro-section">
+            <div class="intro-layout">
                 <div>
-                    <p class="section-kicker">Profile</p>
-                    <h2>Bridging capture stage and in-engine character performance.</h2>
+                    <p class="section-kicker">Positioning</p>
+                    <h2>Performance capture with an eye on the final in-engine image.</h2>
                 </div>
-                <p>Thomas works where live performance becomes digital character output. His focus is supporting reliable motion capture operations, translating body and facial performance into Unreal Engine, and helping creative teams review believable character motion in realtime.</p>
+                <p>Thomas works where live performance becomes readable digital character output. His portfolio emphasizes the full path from capture stage support to realtime Unreal Engine review: performer intent, clean motion transfer, facial workflows, lighting, camera, and cinematic staging.</p>
             </div>
         </section>
 
-        <section class="section" id="expertise" aria-labelledby="expertise-heading">
+        <section class="section reels-section" id="reels">
             <div class="section-heading">
-                <p class="section-kicker">Expertise</p>
-                <h2 id="expertise-heading">Production Strengths</h2>
-                <p>Hands-on stage support with enough Unreal Engine fluency to understand how capture data is used downstream by animation, cinematics, virtual production, and technical art teams.</p>
+                <p class="section-kicker">Demo Reels</p>
+                <h2>Two cuts for two hiring conversations.</h2>
+                <p>The motion capture reel leads with stage-to-character workflow. The Unreal reel leads with cinematic execution, Sequencer, lighting, and realtime visualization.</p>
             </div>
-            <div class="card-grid expertise-grid">
-                <article class="work-card">
-                    <span class="card-index">01</span>
-                    <h3>Motion Capture Stage Operations</h3>
-                    <p>Vicon system support, full-body and facial capture awareness, stage communication, performer-facing technical support, and troubleshooting in live production settings.</p>
+            <div class="reel-grid">
+                <article class="reel-panel">
+                    <div class="video-frame">
+                        <video controls preload="metadata" poster="assets/images/poster-motion-capture.jpg">
+                            <source src="assets/reels/motion-capture-reel.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="reel-copy">
+                        <p class="eyebrow">Motion Capture Reel</p>
+                        <h3>Performance capture, stage support, and realtime character review.</h3>
+                        <a href="motion-capture.html">View Motion Capture Page</a>
+                    </div>
                 </article>
-                <article class="work-card">
-                    <span class="card-index">02</span>
-                    <h3>Realtime Retargeting</h3>
-                    <p>Body and face performance translation into Unreal Engine, retargeting op stack workflows, motion transfer review, and practical attention to performer intent.</p>
+                <article class="reel-panel">
+                    <div class="video-frame">
+                        <video controls preload="metadata" poster="assets/images/poster-unreal-cinematics.jpg">
+                            <source src="assets/reels/unreal-cinematics-reel.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="reel-copy">
+                        <p class="eyebrow">Unreal Engine Reel</p>
+                        <h3>Sequencer, lighting, camera work, and in-engine cinematic production.</h3>
+                        <a href="unreal-cinematics.html">View Unreal Cinematics Page</a>
+                    </div>
                 </article>
-                <article class="work-card">
-                    <span class="card-index">03</span>
-                    <h3>Unreal Cinematics</h3>
-                    <p>Sequencer-based shot setup, realtime scene visualization, camera placement, lighting, character performance review, and in-engine cinematic staging.</p>
-                </article>
-                <article class="work-card">
-                    <span class="card-index">04</span>
-                    <h3>Digital Human Workflows</h3>
-                    <p>MetaHuman Character Creator, facial capture integration, character presentation, digital human review, and body-plus-face performance considerations.</p>
-                </article>
-            </div>
-        </section>
-
-        <section class="pipeline-band" id="pipeline" aria-labelledby="pipeline-heading">
-            <div class="pipeline-inner">
-                <div class="section-heading">
-                    <p class="section-kicker">Pipeline</p>
-                    <h2 id="pipeline-heading">Stage-to-Engine Production Awareness</h2>
-                </div>
-                <div class="pipeline-list">
-                    <article class="pipeline-item">
-                        <p class="resume-label">Capture</p>
-                        <h3>Support the live stage</h3>
-                        <p>Assist capture sessions with calibration awareness, data quality attention, performer support, and clear production communication.</p>
-                    </article>
-                    <article class="pipeline-item">
-                        <p class="resume-label">Translate</p>
-                        <h3>Retarget performance</h3>
-                        <p>Bring full-body and facial performance into Unreal Engine so teams can evaluate motion, character behavior, and acting choices quickly.</p>
-                    </article>
-                    <article class="pipeline-item">
-                        <p class="resume-label">Review</p>
-                        <h3>Shape cinematic output</h3>
-                        <p>Use Sequencer, lighting, camera work, and realtime visualization to help directors, animators, and technical teams make informed creative decisions.</p>
-                    </article>
-                </div>
             </div>
         </section>
 
-        <section class="section skills-section" id="skills" aria-labelledby="skills-heading">
+        <section class="section focus-section" id="focus">
             <div class="section-heading">
-                <p class="section-kicker">Skills</p>
-                <h2 id="skills-heading">Technical Toolkit</h2>
+                <p class="section-kicker">Role-Focused Paths</p>
+                <h2>Choose the skill set that matches the job.</h2>
             </div>
-            <div class="skill-groups">
-                <article class="skill-group">
-                    <h3>Motion Capture</h3>
-                    <ul>
-                        <li>Vicon Motion Capture System</li>
-                        <li>Full-body performance capture</li>
-                        <li>Facial capture workflows</li>
-                        <li>Realtime capture monitoring</li>
-                        <li>Capture troubleshooting</li>
-                    </ul>
-                </article>
-                <article class="skill-group">
-                    <h3>Unreal Engine</h3>
-                    <ul>
-                        <li>Unreal Engine realtime workflows</li>
-                        <li>Unreal Engine Sequencer</li>
-                        <li>Realtime retargeting</li>
-                        <li>In-engine cinematic production</li>
-                        <li>Lighting and camera work</li>
-                    </ul>
-                </article>
-                <article class="skill-group">
-                    <h3>Character Workflows</h3>
-                    <ul>
-                        <li>MetaHuman Character Creator</li>
-                        <li>Retargeting op stack workflows</li>
-                        <li>Digital human performance</li>
-                        <li>Character performance review</li>
-                        <li>Motion quality awareness</li>
-                    </ul>
-                </article>
-                <article class="skill-group">
-                    <h3>Production</h3>
-                    <ul>
-                        <li>Stage communication</li>
-                        <li>Cross-department collaboration</li>
-                        <li>Technical troubleshooting under pressure</li>
-                        <li>Director and animator support</li>
-                        <li>Realtime production problem solving</li>
-                    </ul>
-                </article>
+            <div class="focus-grid">
+                <a class="focus-card" href="motion-capture.html">
+                    <video autoplay muted loop playsinline preload="metadata" poster="assets/images/poster-motion-capture-stage-prep.jpg">
+                        <source src="assets/clips/motion-capture-stage-prep.mp4" type="video/mp4">
+                    </video>
+                    <span>Motion Capture</span>
+                    <h3>Stage operations, performer support, full-body and facial capture.</h3>
+                </a>
+                <a class="focus-card" href="unreal-cinematics.html">
+                    <video autoplay muted loop playsinline preload="metadata" poster="assets/images/poster-sequencer-lighting-camera.jpg">
+                        <source src="assets/clips/sequencer-lighting-camera.mp4" type="video/mp4">
+                    </video>
+                    <span>Unreal Cinematics</span>
+                    <h3>Sequencer, camera, lighting, staging, and realtime review.</h3>
+                </a>
+                <a class="focus-card" href="realtime-retargeting.html">
+                    <video autoplay muted loop playsinline preload="metadata" poster="assets/images/poster-unreal-engine-retargeting.jpg">
+                        <source src="assets/clips/unreal-engine-retargeting.mp4" type="video/mp4">
+                    </video>
+                    <span>Realtime Retargeting</span>
+                    <h3>Body and face performance translated into digital characters.</h3>
+                </a>
             </div>
         </section>
 
-        <section class="roles-band" aria-labelledby="roles-heading">
-            <div class="roles-inner">
-                <div>
-                    <p class="section-kicker">Best Fit</p>
-                    <h2 id="roles-heading">Roles at the intersection of motion capture, characters, and realtime cinematics.</h2>
-                </div>
-                <ul class="role-list" aria-label="Best-fit roles">
-                    <li>Motion Capture Technician</li>
-                    <li>Performance Capture Technician</li>
-                    <li>Realtime Retargeting Specialist</li>
-                    <li>Unreal Engine Cinematics Specialist</li>
-                    <li>Virtual Production Technician</li>
-                    <li>Technical Animation / Mocap Pipeline Specialist</li>
-                    <li>MetaHuman and Facial Capture Workflow Specialist</li>
-                    <li>Cinematic Technical Artist</li>
-                </ul>
+        <section class="section about-section">
+            <div class="portrait-wrap">
+                <img src="assets/images/thomas-halpin-portrait.jpg" alt="Portrait of Thomas Halpin">
+            </div>
+            <div class="about-copy">
+                <p class="section-kicker">About</p>
+                <h2>A technical production collaborator for live capture and Unreal-based character workflows.</h2>
+                <p>Thomas is strongest in roles that need someone who understands both the capture environment and the in-engine result. He supports stage teams, animators, directors, technical artists, and engine operators by keeping performance data useful, readable, and creatively actionable.</p>
+                <dl class="availability-list">
+                    <div>
+                        <dt>Seeking</dt>
+                        <dd>Full-time remote or hybrid roles</dd>
+                    </div>
+                    <div>
+                        <dt>Open to</dt>
+                        <dd>Periodic travel for shoots, stage work, calibration, reviews, and collaboration</dd>
+                    </div>
+                    <div>
+                        <dt>Best fit</dt>
+                        <dd>Motion capture, performance capture, virtual production, technical animation, and Unreal cinematics</dd>
+                    </div>
+                </dl>
             </div>
         </section>
 
-        <section class="contact-band" id="contact" aria-labelledby="contact-heading">
-            <div class="contact-inner">
-                <p class="section-kicker">Contact</p>
-                <h2 id="contact-heading">Open to remote or hybrid production roles.</h2>
-                <p>Thomas is seeking full-time opportunities in motion capture, performance capture, technical animation, virtual production, and Unreal Engine cinematics, with openness to periodic travel for shoots, stage work, calibration, reviews, and collaboration.</p>
-                <div class="contact-actions">
-                    <a class="button button-primary" href="https://github.com/tomhalpin8" target="_blank" rel="noreferrer">github.com/tomhalpin8</a>
-                    <a class="button button-secondary" href="#top">Back to Top</a>
-                </div>
+        <section class="section contact-section">
+            <p class="section-kicker">Contact</p>
+            <h2>For production teams building realtime character performance.</h2>
+            <div class="contact-actions">
+                <a class="button button-primary" href="https://github.com/tomhalpin8" target="_blank" rel="noreferrer">GitHub Profile</a>
+                <a class="button button-secondary" href="motion-capture.html">Start with Motion Capture</a>
             </div>
         </section>
     </main>
+
+    <footer class="site-footer">
+        <span>Thomas Halpin</span>
+        <nav aria-label="Footer navigation">
+            <a href="motion-capture.html">Mocap</a>
+            <a href="unreal-cinematics.html">Cinematics</a>
+            <a href="realtime-retargeting.html">Retargeting</a>
+            <a href="https://github.com/tomhalpin8" target="_blank" rel="noreferrer">GitHub</a>
+        </nav>
+    </footer>
 </body>
 </html>
